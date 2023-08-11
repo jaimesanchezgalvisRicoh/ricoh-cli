@@ -1,0 +1,17 @@
+{
+  "name": "col-coff",
+  "version": "0.1.0",
+  "description": "beta colombian coffee",
+  "author": "jaimesanchezgalvis <jaimesanchezgalvis@gmail.com>",
+  "license": "MIT",
+  "bin": {
+    "ricoh": "./bin/cli.js"
+  },
+  "dependencies": {
+    "chalk": "^4.1.2",
+    "col-coff": "^0.1.0",
+    "esm": "^3.2.25",
+    "inquirer": "^9.2.10",
+    "yargs": "^17.7.2"
+  }
+}
