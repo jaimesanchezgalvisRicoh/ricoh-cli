@@ -53,6 +53,7 @@ const logout = async () => {
 };
 
 argv
+  .strict()
   .command({
     command: "login",
     describe: "Login to the VTEX CLI",
@@ -67,12 +68,9 @@ argv
       await logout();
     },
   })
-  .usage("Usage: $0 <command> [options]")
-  .example("$0 count -f foo.js", "count the lines in the given file")
-  .alias("f", "file")
-  .nargs("f", 1)
-  .describe("f", "Load a file")
-  .demandOption(["f"])
-  .help("h")
+  .usage("Usage: $0 <command> [description]")
   .alias("h", "help")
-  .epilog("copyright 2019").argv;
+  .epilog("copyright 2023")
+  .recommendCommands()
+  .help("h").argv;
+
