@@ -1,5 +1,6 @@
 #!/usr/bin/env node
-const yargs = require("yargs");
+const process = require("process");
+const argv = require("yargs/yargs")(process.argv.slice(2));
 const chalk = require("chalk");
 const { exec } = require("child_process");
 const { promisify } = require("util");
@@ -51,7 +52,7 @@ const logout = async () => {
   console.log(chalk.green("¡Hasta luego! Esperamos verte pronto."));
 };
 
-yargs
+argv
   .command({
     command: "login",
     describe: "Login to the VTEX CLI",
@@ -65,8 +66,13 @@ yargs
     handler: async () => {
       await logout();
     },
-  });
-
-yargs.help();
-
-yargs.parse();
+  })
+  .usage("Usage: $0 <command> [options]")
+  .example("$0 count -f foo.js", "count the lines in the given file")
+  .alias("f", "file")
+  .nargs("f", 1)
+  .describe("f", "Load a file")
+  .demandOption(["f"])
+  .help("h")
+  .alias("h", "help")
+  .epilog("copyright 2019").argv;
