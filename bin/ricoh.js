@@ -54,19 +54,19 @@ const logout = async () => {
 yargs
   .command({
     command: "login",
-    describe: "Log in to the VTEX CLI",
+    describe: "Login to the VTEX CLI",
     handler: async () => {
       await login();
     },
   })
   .command({
     command: "logout",
-    describe: "Log out of the VTEX CLI",
+    describe: "Logout of the VTEX CLI",
     handler: async () => {
       await logout();
     },
   });
 
-yargs.help().argv;
+yargs.help();
 
 yargs.parse();
