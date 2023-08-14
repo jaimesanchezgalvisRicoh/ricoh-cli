@@ -5,7 +5,7 @@
   "author": "jaimesanchezgalvis <jaimesanchezgalvis@gmail.com>",
   "license": "MIT",
   "bin": {
-    "ricoh": "./bin/ricoh.js"
+    "ricoh": "./bin/ricoh"
   },
   "dependencies": {
     "chalk": "^4.1.2",
