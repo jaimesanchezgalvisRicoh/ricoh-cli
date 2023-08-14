@@ -13,5 +13,8 @@
     "esm": "^3.2.25",
     "inquirer": "^9.2.10",
     "yargs": "^17.7.2"
+  },
+  "scripts": {
+    "test": "echo \"No tests available\""
   }
 }
